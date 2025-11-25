@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-teal: #00bfa5;
+  --color-teal-dark: #00897b;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Button Styles that might not be covered by Tailwind utilities */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-teal);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-teal-dark);
+}
+
+.btn-outline {
+  border: 1px solid #e5e7eb;
+  background-color: white;
+}
