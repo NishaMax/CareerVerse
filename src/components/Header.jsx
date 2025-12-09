@@ -13,16 +13,24 @@ const Header = () => {
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="w-1/4">
-          <Link to="/" className="text-2xl font-bold text-teal-500" style={{ color: 'var(--color-teal)' }}>
-            CareerVerse
+          <Link to="/home" className="flex items-center">
+            <img
+              src="/logo-icon.jpg"
+              alt="CareerVerse Logo"
+              className="h-14 w-auto object-contain mix-blend-multiply -mr-3 translate-y-0.5"
+              style={{ filter: 'brightness(1.5) contrast(2)' }}
+            />
+            <span className="text-2xl font-bold text-teal-500" style={{ color: 'var(--color-teal)' }}>
+              areerVerse
+            </span>
           </Link>
         </div>
 
         {/* Desktop Navigation - Centered */}
         <nav className="hidden md:flex items-center justify-center gap-12 flex-1">
           <Link
-            to="/"
-            className={`font-medium text-base hover:text-teal-500 transition-colors ${isActive('/') ? 'text-teal-500' : 'text-gray-600'}`}
+            to="/home"
+            className={`font-medium text-base hover:text-teal-500 transition-colors ${isActive('/home') ? 'text-teal-500' : 'text-gray-600'}`}
           >
             Home
           </Link>

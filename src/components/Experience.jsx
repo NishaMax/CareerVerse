@@ -55,7 +55,7 @@ const Experience = () => {
                 </div>
 
                 <div className="text-center">
-                    <button className="btn btn-primary px-10 py-4 rounded-full text-lg shadow-xl shadow-teal-500/20 hover:shadow-teal-500/30 transition-all">
+                    <button className="btn btn-primary px-10 py-4 rounded-full text-lg shadow-xl shadow-teal-500/20 hover:shadow-teal-500/30 transition-all flex items-center justify-center gap-2 mx-auto">
                         Try All Simulations
                         <ArrowRight size={20} />
                     </button>
