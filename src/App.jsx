@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import MainLayout from './layouts/MainLayout';
 import Landing from './pages/Landing';
@@ -7,6 +7,19 @@ import Home from './pages/Home';
 import About from './pages/About';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
+
+function RedirectOnRefresh() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const navEntries = performance.getEntriesByType('navigation');
+    if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+      navigate('/');
+    }
+  }, [navigate]);
+
+  return null;
+}
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -29,6 +42,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <RedirectOnRefresh />
       <AnimatedRoutes />
     </Router>
   );
