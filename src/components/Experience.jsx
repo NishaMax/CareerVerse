@@ -30,10 +30,10 @@ const Experience = () => {
         <section className="py-24 px-4">
             <div className="container mx-auto">
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Experience Three <span className="text-teal-500" style={{ color: 'var(--color-teal)' }}>Career Paths</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                        Experience Three <span className="text-teal-500 dark:text-teal-400" style={{ color: 'var(--color-teal)' }}>Career Paths</span>
                     </h2>
-                    <p className="text-gray-500 text-lg max-w-3xl mx-auto">
+                    <p className="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto">
                         Immerse yourself in hyper realistic simulations designed to measure your natural aptitudes
                     </p>
                 </div>
@@ -42,14 +42,17 @@ const Experience = () => {
                     {paths.map((path, index) => (
                         <div
                             key={index}
-                            className="p-10 rounded-[2rem] transition-transform hover:-translate-y-2 border"
-                            style={{ backgroundColor: path.bg, borderColor: path.borderColor }}
+                            className="p-10 rounded-[2rem] transition-transform hover:-translate-y-2 border dark:bg-gray-800 dark:border-gray-700"
+                            style={{
+                                backgroundColor: document.documentElement.classList.contains('dark') ? undefined : path.bg,
+                                borderColor: document.documentElement.classList.contains('dark') ? undefined : path.borderColor
+                            }}
                         >
-                            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+                            <div className="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
                                 {path.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{path.title}</h3>
-                            <p className="text-gray-700 text-lg">{path.description}</p>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{path.title}</h3>
+                            <p className="text-gray-700 dark:text-gray-300 text-lg">{path.description}</p>
                         </div>
                     ))}
                 </div>

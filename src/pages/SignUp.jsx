@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
-        <div className="min-h-screen pt-20 flex items-center justify-center bg-gradient-to-br from-teal-50 to-white">
-            <div className="bg-white p-10 rounded-[2rem] shadow-xl w-full max-w-md border border-gray-100 mx-4">
+        <div className="min-h-screen pt-20 flex items-center justify-center bg-gradient-to-br from-teal-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+            <div className="bg-white dark:bg-gray-800 p-10 rounded-[2rem] shadow-xl w-full max-w-md border border-gray-100 dark:border-gray-700 mx-4">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold text-teal-500 mb-2">Join CareerVerse</h2>
-                    <p className="text-gray-500 text-sm">
+                    <h2 className="text-2xl font-bold text-teal-500 dark:text-teal-400 mb-2">Join CareerVerse</h2>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">
                         Create your account to discover your career path
                     </p>
                 </div>
@@ -22,7 +22,7 @@ const SignUp = () => {
                         <input
                             type="text"
                             placeholder="Full Name"
-                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-gray-600 placeholder-gray-400"
+                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 dark:bg-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 dark:focus:ring-teal-900 outline-none transition-all text-gray-600 dark:text-white placeholder-gray-400"
                         />
                     </div>
 
@@ -34,7 +34,7 @@ const SignUp = () => {
                         <input
                             type="email"
                             placeholder="Email Address"
-                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-gray-600 placeholder-gray-400"
+                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 dark:bg-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 dark:focus:ring-teal-900 outline-none transition-all text-gray-600 dark:text-white placeholder-gray-400"
                         />
                     </div>
 
@@ -46,7 +46,7 @@ const SignUp = () => {
                         <input
                             type="password"
                             placeholder="Password"
-                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-gray-600 placeholder-gray-400"
+                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 dark:bg-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 dark:focus:ring-teal-900 outline-none transition-all text-gray-600 dark:text-white placeholder-gray-400"
                         />
                     </div>
 
@@ -58,7 +58,7 @@ const SignUp = () => {
                         <input
                             type="password"
                             placeholder="Confirm Password"
-                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-gray-600 placeholder-gray-400"
+                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 dark:bg-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 dark:focus:ring-teal-900 outline-none transition-all text-gray-600 dark:text-white placeholder-gray-400"
                         />
                     </div>
 
@@ -71,9 +71,9 @@ const SignUp = () => {
                 </form>
 
                 <div className="mt-8 text-center">
-                    <p className="text-gray-500 text-sm">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">
                         Already have an account?{' '}
-                        <Link to="/login" className="text-teal-500 font-medium hover:underline">
+                        <Link to="/login" className="text-teal-500 dark:text-teal-400 font-medium hover:underline">
                             Login
                         </Link>
                     </p>
