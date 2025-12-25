@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Facebook, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -8,9 +9,9 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div>
-                        <a href="/" className="text-xl font-bold text-teal-500 mb-6 block" style={{ color: 'var(--color-teal)' }}>
+                        <Link to="/home" className="text-xl font-bold text-teal-500 mb-6 block" style={{ color: 'var(--color-teal)' }}>
                             CareerVerse
-                        </a>
+                        </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             AI powered career recommendations through hyper realistic simulations.
                         </p>
@@ -21,7 +22,7 @@ const Footer = () => {
                         <h4 className="font-bold mb-6">Quick Links</h4>
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">About</a></li>
+
                             <li><a href="#" className="hover:text-white transition-colors">Simulations</a></li>
                         </ul>
                     </div>

@@ -34,12 +34,7 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
-            to="/about"
-            className={`font-medium text-base hover:text-teal-500 transition-colors ${isActive('/about') ? 'text-teal-500' : 'text-gray-600'}`}
-          >
-            About
-          </Link>
+
         </nav>
 
         {/* Auth Buttons - Right Aligned */}
@@ -62,8 +57,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-6 shadow-xl">
-          <Link to="/" className="text-gray-600 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/about" className="text-gray-600 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
+          <Link to="/home" className="text-gray-600 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
           <div className="h-px bg-gray-100 my-2"></div>
           <div className="flex flex-col gap-4">
             <Link to="/login" className="text-gray-600 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>Login</Link>
