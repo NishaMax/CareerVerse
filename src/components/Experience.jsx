@@ -42,10 +42,10 @@ const Experience = () => {
                     {paths.map((path, index) => (
                         <div
                             key={index}
-                            className="p-10 rounded-[2rem] transition-transform hover:-translate-y-2 border dark:bg-gray-800 dark:border-gray-700"
+                            className="p-10 rounded-[2rem] transition-transform hover:-translate-y-2 border bg-[var(--light-bg)] border-[var(--light-border)] dark:bg-gray-800 dark:border-gray-700"
                             style={{
-                                backgroundColor: document.documentElement.classList.contains('dark') ? undefined : path.bg,
-                                borderColor: document.documentElement.classList.contains('dark') ? undefined : path.borderColor
+                                '--light-bg': path.bg,
+                                '--light-border': path.borderColor
                             }}
                         >
                             <div className="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
