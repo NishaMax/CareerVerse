@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans selection:bg-emerald-500/30 transition-colors duration-300">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Routes>
