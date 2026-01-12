@@ -24,10 +24,10 @@ const Home = () => {
                     </div>
 
                     <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight animate-fade-in-up text-gray-900 dark:text-white">
-                        Your Future,
+                        Discover Your
                         <br />
                         <span className="bg-gradient-to-r from-emerald-600 via-green-500 to-teal-600 dark:from-emerald-400 dark:via-green-400 dark:to-teal-400 bg-clip-text text-transparent animate-gradient">
-                            Simulated & Decoded
+                            True Career Path
                         </span>
                     </h1>
 
